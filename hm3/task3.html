@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Button Event Handling</title>
+  </head>
+  <body>
+    <button id="actionButton">Hover or Click me!</button>
+    <div id="message"></div>
+    <script>
+      const button = document.getElementById("actionButton");
+      const message = document.getElementById("message");
+      function addMessage(text) {
+        message.innerHTML += text + "<br>";
+      }
+
+      button.addEventListener("click", function () {
+        addMessage("I was pressed!");
+      });
+
+      button.addEventListener("mouseover", function () {
+        addMessage("Mouse on me!");
+      });
+
+      button.addEventListener("mouseout", function () {
+        addMessage("Mouse is not on me!");
+      });
+    </script>
+  </body>
+</html>
